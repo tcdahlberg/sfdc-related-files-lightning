@@ -1,0 +1,24 @@
+minimum_cumulusci_version: '3.68.1'
+project:
+    name: sfdc-related-files-lightning
+    package:
+        name: sfdc-related-files-lightning
+        api_version: '55.0'
+    git:
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/sfdc-related-files-lightning/tests
+            options:
+                outputdir: robot/sfdc-related-files-lightning/results
+
+    robot_testdoc:
+        options:
+            path: robot/sfdc-related-files-lightning/tests
+            output: robot/sfdc-related-files-lightning/doc/sfdc-related-files-lightning_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
